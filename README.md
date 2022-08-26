@@ -1,11 +1,13 @@
 # Badge2020_ESPeasy
-Installing ESPeasy on the Fri3d camp 2020 badge hardware
+Installing ESPeasy on the Fri3dcamp 2020 badge hardware
 
-This document descibes how to install ESPeasy firmware on the Fri3d camp 202 badge.
+This document descibes how to install and configure ESPeasy firmware on the Fri3dcamp 2020 badge.
 
 ## ESPeasy
 
-The ESP Easy firmware can be used to turn the ESP module into an easy multifunction sensor device for Home Automation solutions like Domoticz. Configuration of the ESP Easy is entirely web based, so once you've got the firmware loaded, you don't need any other tool besides a common web browser. https://www.letscontrolit.com/wiki/index.php/ESPEasy
+The ESP Easy firmware can be used to turn the ESP module into an easy multifunction sensor device for Home Automation solutions like Home Assistant, OpenHAB or Domoticz. Configuration of the ESP Easy is entirely web based, so once you've got the firmware loaded, you don't need any other tool besides a common web browser. For more info, see https://www.letscontrolit.com/wiki/index.php/ESPEasy
+
+Here's the step for getting ESPeasy installed and configured on the Fri3dcamp 2020 badge.
 
 ## Getting ESPeasy
 
