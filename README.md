@@ -19,6 +19,7 @@ What *should work* but hasn't been tested:
 - Reading charge IC status on pins GPIO 34 and 35
 - IR receiver (would probably work with custom_IR ESPeasy firmware but is untested)
 - Temp & humidity (by populating an appropriate and supported IC)
+- Monitoring battery charging through pins GPIO 34 and 35
 
 What *doesn't work* (not supported in ESPeasy):
 - LIS2DH12 accelerometer 
@@ -214,6 +215,44 @@ Set `Switch Type` to `Switch`
 Set `Switch Button Type` to `Normal Switch`
 
 Click `Submit`
+
+**Battery charge monitoring - Charge.Status**
+
+Add a new device
+
+Select `Switch input - Switch`
+
+Name it `Bat.Charge.Status`
+
+Check Enable
+
+Set `GPIO` to `GPIO-34`
+
+Set `Switch Type` to `Switch`
+
+Set `Switch Button Type` to `Normal Switch`
+
+Click `Submit`
+
+
+**Battery charge monitoring - Bat.Mon**
+
+Add a new device
+
+Select `Switch input - Switch`
+
+Name it `Bat.Mon`
+
+Check Enable
+
+Set `GPIO` to `GPIO-35`
+
+Set `Switch Type` to `Switch`
+
+Set `Switch Button Type` to `Normal Switch`
+
+Click `Submit`
+
 
 ### Tab "Tools":
 
