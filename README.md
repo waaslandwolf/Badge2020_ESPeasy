@@ -281,6 +281,29 @@ Click `Save`
 
 Check the serial terminal for feedback. You should see the "on Battery#Analog do" get triggered (EVENT: Battery#Analog=4.23), and the st7789 display commands being sent. If all is well, you should see the voltage that is on GPIO-35 (converted into battery voltage) on the display.
 
+## Using outputs
+
+Outputs do not need to be configured. They can be addresses directly by using commands in these ways:
+- from the `Command` prompt in the `Tools` menu
+- sending the command over HTTP in a browser 
+- by sending a command in an MQTT topic
+- triggering commands from the `Rules`
+
+*Examples:*
+
+Type this into the `Command` prompt in the `Tools` menu:
+    rtttl,32:d=4,o=5,b=112:8a,8a,a,8a,8a,a,8a,8c6,8f.,16g,2a,8a-,8a-,8a-.,16a-,8a-,8a,8a.,16a,8a,8g,8g,8a,g,c6
+
+Browse to the URL `http://<badge IP>/cmd?tone,32,1300,200`
+
+Send `tone,32,3000,100` in the topic `<unitname_unitnumber>/cmd` over MQTT
+
+Add this to your Rules to add a boot up sound that will play when your badge completes booting:
+    On System#Boot do
+      rtttl,32:d=10,o=6,b=300,c,d,e,f,g
+    endon
+
+
 ## Odds and ends
 
 The Buzzer on the badge is on pin `GPIO32` and can be controlled with the command `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. `PWM,32,100,100,3000`). It does not require a device to be set up.
