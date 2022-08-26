@@ -240,15 +240,13 @@ Add the following rules:
 
 Click Save
 
-Check the serial terminal to see check for feedback. You should see the "on Battery#Analog do" get triggered, and the st7789 display commands being sent. If all is well, you should see a number representing the voltage on pin GPIO-35 on the display.
+Check the serial terminal for feedback. You should see the "on Battery#Analog do" get triggered (EVENT: Battery#Analog=4.23), and the st7789 display commands being sent. If all is well, you should see the voltage that is on GPIO-35 (converted into battery voltage) on the display.
 
 ## Odds and ends
 
 The Buzzer on the badge is on pin GPIO32 and can be controlled with the command "PWM,<GPIO>,<duty>,<duration>,<frequency>" (e.g. PWM,32,100,100,3000). It does not require a device to be set up.
 
-The IR receiver is on pin GPIO25 but requires a different ESPeasy firmware to be flashed before it can be used.
-
-The LIS2DH12 accelerometer is unfortunately not supported by ESPeasy.
+The IR receiver is on pin GPIO25 but requires a different ESPeasy firmware (custom_IR?) to be flashed before it can be used.
 
  
 Have fun, happy hacking!
