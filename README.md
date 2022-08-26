@@ -179,7 +179,7 @@ Set Strip Type to GRB
 Click Submit
 
 
-**Battery voltage monitoring **
+**Battery voltage monitoring**
 
 Add a new device
 
@@ -231,12 +231,12 @@ Click Submit
 
 Add the following rules:
 
-  on Battery#Analog do
-   logentry,Battery triggered, %eventvalue%
-   st7789cmd,clear
-   st7789,txp,1,2
-   st7789,txt,VBat:%eventvalue%V
-  endon
+    on Battery#Analog do
+    logentry,Battery triggered, %eventvalue%
+    st7789cmd,clear
+    st7789,txp,1,2
+    st7789,txt,VBat:%eventvalue%V
+    endon
 
 Click Save
 
