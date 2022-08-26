@@ -298,8 +298,8 @@ Outputs do not need to be configured. They can be addresses directly by using co
 
 Type one of these into the `Command` prompt in the `Tools` menu:
 - `rtttl,32:d=4,o=5,b=112:8a,8a,a,8a,8a,a,8a,8c6,8f.,16g,2a,8a-,8a-,8a-.,16a-,8a-,8a,8a.,16a,8a,8g,8g,8a,g,c6` plays some music on the buzzer
-- `PWM,32,100,100,3000` sends a PWM signal to the buzzer
-- `NeoPixel,1,255,127,255,100` ligts up the first NeoPixel 
+- `PWM,25,50,100,3000` sends a PWM signal to the buzzer
+- `NeoPixel,1,255,0,255` lights up the first NeoPixel 
 - `GPIO,25,1` (briefly) shuts off the on board red LED below the battery (until the wifi indication function re-enables it)
 
 Browse to the URL `http://<badge IP>/cmd?tone,32,1300,200`
