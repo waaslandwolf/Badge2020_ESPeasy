@@ -148,11 +148,11 @@ Set `TFT display model` to `ST7789 240 x 240px`
 
 Set `Rotation` to `+180°`
 
-Set `Font Scaling` to 3 (or something else if you desire)
+Set `Font Scaling` to `3` (or something else if you desire)
 
-Set `Foreground colour` to white
+Set `Foreground colour` to `white`
 
-Set `Background colour` to green
+Set `Background colour` to `green`
 
 Put some text in Line 1 just as a test. If the display works, this text will appear on the display after submit or reboot.
 
@@ -189,15 +189,15 @@ Select `Analog input - internal`
 
 Check enable
 
-Name it Battery
+Name it `Battery` (or something else you like)
 
 Set `Analog Pin` to `ADC1 ch7 / GPIO-35`
 
-Set `Oversampling` to `Oversampling`
+Set `Oversampling` to `Oversampling`. This averages multiple readings and thus makes readings more accurate. 
 
 Check `Apply Factory Calibration`
 
-Apply the formula `%value%*2/1000` to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
+Apply the formula `%value%*2/1000` to the Formula field in Values (this formula needs to be tuned and calibrated to match the actual torelances of the 100k/100k resistor divider on your badge but should be close enough for its purpose)
 
 Click `Submit`
 
@@ -259,7 +259,7 @@ Click `Submit`
 
 Click the `Advanced button`
 
-You can set NTP to `be.pool.ntp.org` here to get time through the internet
+You can set NTP to `be.pool.ntp.org` here to let the badge fetch internet time
 
 Enable `Rules`
 
@@ -271,11 +271,15 @@ Click `Submit`
 
 Add the following rules:
 
+    On System#Boot do
+        rtttl,32:d=10,o=6,b=300,c,d,e,f,g
+    endon
+    
     on Battery#Analog do
-    logentry,Battery triggered, %eventvalue%
-    st7789cmd,clear
-    st7789,txp,1,2
-    st7789,txt,VBat:%eventvalue%V
+        logentry,Battery triggered, %eventvalue%
+        st7789cmd,clear
+        st7789,txp,1,2
+        st7789,txt,VBat:%eventvalue%V
     endon
 
 Click `Save`
