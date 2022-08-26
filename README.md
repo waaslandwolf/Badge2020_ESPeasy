@@ -20,8 +20,7 @@ What *should work* but hasn't been tested:
 - I²C communications
 - ISP communications
 - MHZ19 CO2 sensor
-- Reading charge IC status on pins GPIO 34 and 35
-- IR receiver (would probably work with custom_IR ESPeasy firmware but is untested)
+- IR receiver (would probably work with `custom_IR` ESPeasy firmware but is untested)
 - Temp & humidity (by populating an appropriate and supported IC)
 - Monitoring battery charging through pins GPIO 34 and 35
 
