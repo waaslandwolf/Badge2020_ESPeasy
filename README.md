@@ -13,24 +13,35 @@ Here's the step for getting ESPeasy installed and configured on the Fri3dcamp 20
 
 Download the latest release from Github: https://github.com/letscontrolit/ESPEasy/releases
 
-Extract the ZIP file in it's own folder. Open that folder.
+Extract the ZIP file into it's own folder. Open that folder.
 
 ## Flashing the firmware
 
 Refer to the ESPeasy documentation: https://www.letscontrolit.com/wiki/index.php/ESPEasy#Loading_firmware
 
 Open the Espressif flash download tool from the folder \Espressif_flash_download_tool_v3.8.5\flash_download_tool_3.8.5.exe
+
 Select "Developer Mode"
+
 Select "ESP32 DownloadTool"
 
+
 In the ESP32 Download tool, select the top row and click the ... to select a firmware file.
+
 Browse to the "bin" folder and select the firmware file "ESP_Easy_mega_20220809_display_ESP32_4M316k.factory.bin"
+
 Put a 0 in the load address (@ 0)
+
 Set SPI speed to 40MHz
+
 Set SPI mode to DIO
+
 Set Flash Size to 16Mbit
+
 Select your board's comm port
+
 Click the "Start" button
+
 
 Your firmware should now be flashed to your badge. Look in the terminal window associated with the ESP flash tool for any errors.
 
