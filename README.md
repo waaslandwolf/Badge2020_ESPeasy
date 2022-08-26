@@ -86,7 +86,7 @@ Set a Unit Number
 Click Submit
 
 
-*Tab "Hardware":*
+### Tab "Hardware":###
 
 Wifi Status LED: none
 
@@ -99,9 +99,9 @@ SPI interface: Init SPI: VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23
 Click Submit
 
 
-*Tab "Devices:*
+### Tab "Devices:###
 
-Add a new device
+**Add a new device**
 
 Select "Display - ST77xx TFT"
 
@@ -137,7 +137,7 @@ Make sure the backlight of the TFT is on (little switch on the right hand side o
 The display won't work unless SPI is configured, see Hardware tab above.
 
 
-Add a new device
+**Add a new device**
 
 Select "Output - NeoPixel (Basic)"
 
@@ -151,32 +151,54 @@ Set Strip Type to GRB
 
 Click Submit
 
-Add a new device
+
+**Add a new device**
+
 Select "Analog input - internal"
+
 Check enable
+
 Name it Battery
+
 Set Analog Pin to ADC1 ch7 / GPIO-35
+
 Set Oversampling to Oversampling
+
 Check Apply Factory Calibration
+
 Apply the formula "%value%*2/1000" to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
+
 Click Submit
 
-Add a new device
+
+**Add a new device**
+
 Select "Switch input - Switch"
+
 Check Enable
+
 Set GPIO to GPIO-0 (this selects the BOOT switch on the badge)
+
 Set Switch Type to Switch
+
 Set Switch Button Type to Normal Switch
+
 Click submit
 
-*Tab "Tools":*
+### Tab "Tools":###
+
 Click the Advanced button
+
 You can set NTP to be.pool.ntp.org here to get time through the internet
-It's a good idea to also enable Rules
+
+Enable Rules
+
 Click Submit
 
-*Tab "Rules"*
+### Tab "Rules"###
+
 (Rules needs to be enabled in Tools - Advanced to be able to see this tab)
+
 Add the following rules:
 
   on Battery#Analog do
