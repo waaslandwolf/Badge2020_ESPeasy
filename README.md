@@ -4,7 +4,7 @@
 
 This document descibes how to install and configure ESPeasy firmware on the Fri3dcamp 2020 badge.
 
-What works and has been tested:
+What *works* and has been tested:
 - TFT display
 - NeoPixel LEDs
 - Battery voltage monitoring
@@ -12,7 +12,7 @@ What works and has been tested:
 - Buzzer
 - LED on GPIO-25 shows wifi connection status
 
-What should work but hasn't been tested:
+What *should work* but hasn't been tested:
 - I²C communications
 - ISP communications
 - MHZ19 CO2 sensor
@@ -20,7 +20,7 @@ What should work but hasn't been tested:
 - IR receiver (would probably work with custom_IR ESPeasy firmware but is untested)
 - Temp & humidity (by populating an appropriate and supported IC)
 
-What doesn't work (not supported in ESPeasy):
+What *doesn't work* (not supported in ESPeasy):
 - LIS2DH12 accelerometer 
 - Encryption chip
 
