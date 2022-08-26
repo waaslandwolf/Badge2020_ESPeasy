@@ -52,14 +52,23 @@ If flashing doesn"t work, hold the BOOT button on the badge, then press the RESE
 ## Connecting ESPeasy to your wifi network
 
 If everything has gone right you have a useable ESP Easy device now. As no parameters are set it will go to "AP mode" for configuration.
+
 Use your computer, tablet or smartphone and search a WiFi network named "ESP_Easy_0".
+
 Connect to ESP_Easy_0 using the password "configesp" (without "").
+
 Open your internet browser and type 192.168.4.1 as internet address into the browser. The WiFi setup of the ESP Easy opens.
+
 You can choose your WiFi network now. Select the SSID and enter your passphrase, click connect.
+
 It will take 20 seconds until a result is shown. If you typed everything correctly it will show a message that it is connected to the network and it shows the IP address.
-Note the IP address!
+
+**Note the IP address!**
+
 Connect your computer or whatever back to your usual network. Open a browser and type the ip address into the browser.
+
 You should see the config pages of ESPEasy now. 
+
 
 Refer to this tutorial: https://www.letscontrolit.com/wiki/index.php/Basics:_Connecting_and_flashing_the_ESP8266
 
@@ -67,43 +76,79 @@ Refer to this tutorial: https://www.letscontrolit.com/wiki/index.php/Basics:_Con
 
 Once ESPeasy is properly connected to your wifi you can configure it.
 
-*Tab "Main Settings":*
+
+### Tab "Main Settings":###
+
 Set a unit Name
+
 Set a Unit Number
+
 Click Submit
+
 
 *Tab "Hardware":*
+
 Wifi Status LED: none
+
 Reset Pin: none
+
 I²C interface: GPIO - SDA: GPIO-21, GPIO - SCL: GPIO-22
+
 SPI interface: Init SPI: VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23
+
 Click Submit
+
 
 *Tab "Devices:*
-Add a new device
-Select "Display - ST77xx TFT"
-Give it a name (e.g. Display)
-Check enable
-Set GPIO -> CS to GPIO-5
-Set GPIO -> DC to GPIO-33
-Set GPIO -> RES to None
-Set GPIO -> Backlight to GPIO-0 (not sure about this one as the backlight is controlled differently)
-Set TFT display model to ST7789 240 x 240px
-Set Rotation to +180°
-Set Font Scaling to 3 (or something else if you desire)
-Set Foreground colour to white
-Set Background colour to green
-Put some text in Line 1 just as a test. If the display works, this text will appear on the display after submit or reboot.
-Click Submit
-Make sure the backlight of the TFT is on (little switch on the right hand side of the badge)
-The display won't work unless SPI is configured, see Hardware tab above.
 
 Add a new device
-Select "Output - NeoPixel (Basic)"
+
+Select "Display - ST77xx TFT"
+
+Give it a name (e.g. Display)
+
 Check enable
+
+Set GPIO -> CS to GPIO-5
+
+Set GPIO -> DC to GPIO-33
+
+Set GPIO -> RES to None
+
+Set GPIO -> Backlight to GPIO-12 (not sure about this one)
+
+Set TFT display model to ST7789 240 x 240px
+
+Set Rotation to +180°
+
+Set Font Scaling to 3 (or something else if you desire)
+
+Set Foreground colour to white
+
+Set Background colour to green
+
+Put some text in Line 1 just as a test. If the display works, this text will appear on the display after submit or reboot.
+
+Click Submit
+
+
+Make sure the backlight of the TFT is on (little switch on the right hand side of the badge)
+
+The display won't work unless SPI is configured, see Hardware tab above.
+
+
+Add a new device
+
+Select "Output - NeoPixel (Basic)"
+
+Check enable
+
 Set GPIO -> DIN to GPIO-2
+
 Set Led Count to 5
+
 Set Strip Type to GRB
+
 Click Submit
 
 Add a new device
