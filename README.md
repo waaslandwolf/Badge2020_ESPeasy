@@ -252,6 +252,6 @@ The IR receiver is on pin `GPIO25` but requires a different ESPeasy firmware (cu
 Have fun, happy hacking!
 
     Raketman
-  
+waaslandwolf@gmail.com  
 
 Origin of this document: https://github.com/waaslandwolf/Badge2020_ESPeasy/blob/main/README.md
