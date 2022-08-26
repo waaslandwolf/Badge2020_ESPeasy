@@ -64,7 +64,7 @@ Click Submit
 *Tab "Hardware":*
 Wifi Status LED: none
 Reset Pin: none
-I²C interface: GPIO - SDA: GPIO-21, GPIO - SCL: GPIO-22 (the default I²C pins conflict with the SPI so we need to move them to different GPIO)
+I²C interface: GPIO - SDA: GPIO-21, GPIO - SCL: GPIO-22
 SPI interface: Init SPI: VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23
 Click Submit
 
@@ -102,7 +102,7 @@ Name it Battery
 Set Analog Pin to ADC1 ch7 / GPIO-35
 Set Oversampling to Oversampling
 Check Apply Factory Calibration
-Apply the formula (-1000*%value%)/(%value%-3300) to the Formula field in Values (this formula isn't correct and needs to be changed according to the correct resistor divider on the board)
+Apply the formula "%value%*2/1000" to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
 Click Submit
 
 Add a new device
@@ -133,3 +133,15 @@ endon
 Click Save
 
 Check the serial terminal to see check for feedback. You should see the "on Battery#Analog do" get triggered, and the st7789 display commands being sent. If all is well, you should see a number representing the voltage on pin GPIO-35 on the display.
+
+## Odds and ends
+
+The Buzzer on the badge is on pin GPIO32 and can be controlled with the command "PWM,<GPIO>,<duty>,<duration>,<frequency>" (e.g. PWM,32,100,100,3000). It does not require a device to be set up.
+
+The IR receiver is on pin GPIO25 but requires a different ESPeasy firmware to be flashed before it can be used.
+
+The LIS2DH12 accelerometer is unfortunately not supported by ESPeasy.
+
+ 
+Have fun, happy hacking!
+Raketman
