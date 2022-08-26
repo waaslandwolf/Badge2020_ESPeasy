@@ -1,4 +1,4 @@
-# Installing ESPeasy on the Fri3dcamp 2020 badge hardware
+# Installing ESPeasy on the Fri3dcamp 2020 badge
 
 This document descibes how to install and configure ESPeasy firmware on the Fri3dcamp 2020 badge.
 
