@@ -123,12 +123,12 @@ Click Submit
 (Rules needs to be enabled in Tools - Advanced to be able to see this tab)
 Add the following rules:
 
-on Battery#Analog do
- logentry,"Battery triggered"
- st7789cmd,clear
- st7789,txp,1,2
- st7789,txt,%eventvalue%
-endon
+  on Battery#Analog do
+   logentry,Battery triggered, %eventvalue%
+   st7789cmd,clear
+   st7789,txp,1,2
+   st7789,txt,VBat:%eventvalue%V
+  endon
 
 Click Save
 
