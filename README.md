@@ -106,20 +106,20 @@ Set a unit Name (e.g. Fri3d-badge)
 
 Set a Unit Number (e.g. 1)
 
-Click Submit
+Click `Submit`
 
 
 ### Tab "Hardware":
 
 Wifi Status LED: `GPIO-25`
 
-Reset Pin: none
+Reset Pin: `none`
 
 I²C interface: `GPIO-SDA: GPIO-21`, `GPIO-SCL: GPIO-22` (untested but should work)
 
 SPI interface: Init SPI: `VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23`
 
-Click Submit
+Click `Submit`
 
 
 ### Tab "Devices:
@@ -154,7 +154,7 @@ Set `Background colour` to green
 
 Put some text in Line 1 just as a test. If the display works, this text will appear on the display after submit or reboot.
 
-Click Submit
+Click `Submit`
 
 
 Make sure the backlight of the TFT is on (little switch on the right hand side of the badge).
@@ -176,7 +176,7 @@ Set `Led Count` to `5`
 
 Set `Strip Type` to `GRB`
 
-Click Submit
+Click `Submit`
 
 
 **Battery voltage monitoring**
@@ -197,7 +197,7 @@ Check `Apply Factory Calibration`
 
 Apply the formula `%value%*2/1000` to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
 
-Click Submit
+Click `Submit`
 
 **BOOT switch**
 
@@ -213,7 +213,7 @@ Set `Switch Type` to `Switch`
 
 Set `Switch Button Type` to `Normal Switch`
 
-Click submit
+Click `Submit`
 
 ### Tab "Tools":
 
@@ -223,7 +223,7 @@ You can set NTP to `be.pool.ntp.org` here to get time through the internet
 
 Enable `Rules`
 
-Click Submit
+Click `Submit`
 
 ### Tab "Rules"
 
@@ -238,7 +238,7 @@ Add the following rules:
     st7789,txt,VBat:%eventvalue%V
     endon
 
-Click Save
+Click `Save`
 
 Check the serial terminal for feedback. You should see the "on Battery#Analog do" get triggered (EVENT: Battery#Analog=4.23), and the st7789 display commands being sent. If all is well, you should see the voltage that is on GPIO-35 (converted into battery voltage) on the display.
 
