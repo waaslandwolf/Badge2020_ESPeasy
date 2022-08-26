@@ -92,15 +92,14 @@ It will take 20 seconds until a result is shown. If you typed everything correct
 
 **Note the IP address!**
 
-Connect your computer or whatever back to your usual network. Open a browser and type the ip address that you noted into the browser.
-
-You should see the config pages of ESPEasy now. 
 
 Refer to this tutorial: https://www.letscontrolit.com/wiki/index.php/Basics:_Connecting_and_flashing_the_ESP8266
 
 ## ESPeasy setup
 
-Once ESPeasy is properly connected to your wifi you can configure it.
+Once ESPeasy is properly connected to your wifi you can configure it. Connect your computer or whatever back to your usual network. Open a browser and type the ip address that you noted into the browser.
+
+You should see the config pages of ESPEasy now. 
 
 
 ### Tab "Main Settings":
