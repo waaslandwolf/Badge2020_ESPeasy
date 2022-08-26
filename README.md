@@ -306,6 +306,7 @@ Browse to the URL `http://<badge IP>/cmd?tone,32,1300,200`
 Send `tone,32,3000,100` in the topic `<unitname_unitnumber>/cmd` over MQTT
 
 Add this to your Rules to add a boot up sound that will play when your badge completes booting:
+
     On System#Boot do
       rtttl,32:d=10,o=6,b=300,c,d,e,f,g
     endon
