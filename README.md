@@ -100,7 +100,7 @@ Refer to this tutorial: https://www.letscontrolit.com/wiki/index.php/Basics:_Con
 Once ESPeasy is properly connected to your wifi you can configure it.
 
 
-### Tab "Main Settings":###
+### Tab "Main Settings":
 
 Set a unit Name (e.g. Fri3d-badge)
 
@@ -109,7 +109,7 @@ Set a Unit Number (e.g. 1)
 Click Submit
 
 
-### Tab "Hardware":###
+### Tab "Hardware":
 
 Wifi Status LED: GPIO-25
 
@@ -122,7 +122,7 @@ SPI interface: Init SPI: VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23
 Click Submit
 
 
-### Tab "Devices:###
+### Tab "Devices:
 
 **TFT Display**
 
@@ -215,7 +215,7 @@ Set Switch Button Type to Normal Switch
 
 Click submit
 
-### Tab "Tools":###
+### Tab "Tools":
 
 Click the Advanced button
 
@@ -225,7 +225,7 @@ Enable Rules
 
 Click Submit
 
-### Tab "Rules"###
+### Tab "Rules"
 
 (Rules needs to be enabled in Tools - Advanced to be able to see this tab)
 
@@ -253,3 +253,6 @@ The LIS2DH12 accelerometer is unfortunately not supported by ESPeasy.
  
 Have fun, happy hacking!
 Raketman
+  
+
+Origin of this document: https://github.com/waaslandwolf/Badge2020_ESPeasy/blob/main/README.md
