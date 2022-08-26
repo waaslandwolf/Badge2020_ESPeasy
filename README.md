@@ -41,7 +41,7 @@ Download the latest release from Github: https://github.com/letscontrolit/ESPEas
 
 Extract the ZIP file into it's own folder. Open that folder.
 
-## Flashing the firmware
+## Flashing the ESPeasy firmware
 
 Refer to the ESPeasy documentation: https://www.letscontrolit.com/wiki/index.php/ESPEasy#Loading_firmware
 
@@ -94,7 +94,7 @@ It will take 20 seconds until a result is shown. If you typed everything correct
 
 Refer to this tutorial: https://www.letscontrolit.com/wiki/index.php/Basics:_Connecting_and_flashing_the_ESP8266
 
-## ESPeasy setup
+## Configuring ESPeasy
 
 Once ESPeasy is properly connected to your wifi you can configure it. Connect your computer or whatever back to your usual network. Open a browser and type the ip address that you noted into the browser.
 
