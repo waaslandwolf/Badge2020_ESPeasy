@@ -244,8 +244,7 @@ Check the serial terminal for feedback. You should see the "on Battery#Analog do
 
 ## Odds and ends
 
-The Buzzer on the badge is on pin GPIO32 and can be controlled with this command (e.g. PWM,32,100,100,3000). It does not require a device to be set up.
-    PWM,<GPIO>,<duty>,<duration>,<frequency>
+The Buzzer on the badge is on pin GPIO32 and can be controlled with the command `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. PWM,32,100,100,3000). It does not require a device to be set up.
     
 The IR receiver is on pin GPIO25 but requires a different ESPeasy firmware (custom_IR?) to be flashed before it can be used.
 
