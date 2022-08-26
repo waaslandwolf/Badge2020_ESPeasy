@@ -4,6 +4,12 @@
 
 This document descibes how to install and configure ESPeasy firmware on the Fri3dcamp 2020 badge.
 
+## ESPeasy
+
+The ESP Easy firmware can be used to turn the ESP module into an easy multifunction sensor device for Home Automation solutions like Home Assistant, OpenHAB, Domoticz or other software that speaks MQTT. Configuration of the ESP Easy is entirely web based, so once you've got the firmware loaded, you don't need any other tool besides a common web browser. For more info, see https://www.letscontrolit.com/wiki/index.php/ESPEasy
+
+## What works and doesn't work
+
 What *works* and has been tested:
 - TFT display
 - NeoPixel LEDs
@@ -28,9 +34,6 @@ What *doesn't work* (not supported in ESPeasy):
 Work in progress:
 - Controlling the display backlight from ESPeasy as opposed to using the provided switch/accelerometer configuration
 
-## ESPeasy
-
-The ESP Easy firmware can be used to turn the ESP module into an easy multifunction sensor device for Home Automation solutions like Home Assistant, OpenHAB, Domoticz or other software that speaks MQTT. Configuration of the ESP Easy is entirely web based, so once you've got the firmware loaded, you don't need any other tool besides a common web browser. For more info, see https://www.letscontrolit.com/wiki/index.php/ESPEasy
 
 Here's the step for getting ESPeasy installed and configured on the Fri3dcamp 2020 badge.
 
