@@ -43,16 +43,16 @@ Extract the ZIP file into it's own folder. Open that folder.
 
 Refer to the ESPeasy documentation: https://www.letscontrolit.com/wiki/index.php/ESPEasy#Loading_firmware
 
-Open the Espressif flash download tool from the folder \Espressif_flash_download_tool_v3.8.5\flash_download_tool_3.8.5.exe
+Open the Espressif flash download tool from the folder **\Espressif_flash_download_tool_v3.8.5\flash_download_tool_3.8.5.exe**
 
-Select "Developer Mode"
+Select `Developer Mode`
 
-Select "ESP32 DownloadTool"
+Select `ESP32 DownloadTool`
 
 
 In the ESP32 Download tool, select the top row and click the ... to select a firmware file.
 
-Browse to the "bin" folder and select the firmware file "ESP_Easy_mega_20220809_**display**_ESP32_4M316k.factory.bin"
+Browse to the `bin` folder and select the firmware file `ESP_Easy_mega_20220809_**display**_ESP32_4M316k.factory.bin`
 
 Put a 0 in the load address (@ 0)
 
@@ -64,7 +64,7 @@ Set Flash Size to 16Mbit
 
 Select your board's comm port
 
-Click the "Start" button
+Click the `Start` button
 
 
 Your firmware should now be flashed to your badge. Look in the terminal window associated with the ESP flash tool for any errors.
@@ -77,11 +77,11 @@ If flashing doesn"t work, hold the BOOT button on the badge, then press the RESE
 
 If everything has gone right, you have a useable ESP Easy device now. As no parameters are set it will go to "AP mode" for configuration.
 
-Use your computer, tablet or smartphone and search a WiFi network named "ESP_Easy_0".
+Use your computer, tablet or smartphone and search a WiFi network named `ESP_Easy_0`.
 
-Connect to ESP_Easy_0 using the password configesp
+Connect to` ESP_Easy_0` using the password `configesp`
 
-Open your internet browser and type 192.168.4.1 as internet address into the browser. The WiFi setup of the ESP Easy opens.
+Open your internet browser and type `192.168.4.1` as internet address into the browser. The WiFi setup of the ESP Easy opens.
 
 You can configure your own local WiFi network now. Select the SSID and enter your passphrase, click connect.
 
@@ -111,13 +111,13 @@ Click Submit
 
 ### Tab "Hardware":
 
-Wifi Status LED: GPIO-25
+Wifi Status LED: `GPIO-25`
 
 Reset Pin: none
 
-I²C interface: GPIO-SDA: GPIO-21, GPIO-SCL: GPIO-22 (untested but should work)
+I²C interface: `GPIO-SDA: GPIO-21`, `GPIO-SCL: GPIO-22` (untested but should work)
 
-SPI interface: Init SPI: VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23
+SPI interface: Init SPI: `VSPI: CLK=GPIO-18, MISO=GPIO-19, MOSI=GPIO-23`
 
 Click Submit
 
@@ -128,29 +128,29 @@ Click Submit
 
 Add a new device
 
-Select "Display - ST77xx TFT"
+Select `Display - ST77xx TFT`
 
 Give it a name (e.g. Display)
 
 Check enable
 
-Set GPIO -> CS to GPIO-5
+Set `GPIO -> CS` to `GPIO-5`
 
-Set GPIO -> DC to GPIO-33
+Set `GPIO -> DC` to `GPIO-33`
 
-Set GPIO -> RES to None
+Set `GPIO -> RES` to `None`
 
-Set GPIO -> Backlight to GPIO-12 (not sure about this one)
+Set `GPIO -> Backlight` to `GPIO-12` (not sure about this one)
 
-Set TFT display model to ST7789 240 x 240px
+Set `TFT display model` to `ST7789 240 x 240px`
 
-Set Rotation to +180°
+Set `Rotation` to `+180°`
 
-Set Font Scaling to 3 (or something else if you desire)
+Set `Font Scaling` to 3 (or something else if you desire)
 
-Set Foreground colour to white
+Set `Foreground colour` to white
 
-Set Background colour to green
+Set `Background colour` to green
 
 Put some text in Line 1 just as a test. If the display works, this text will appear on the display after submit or reboot.
 
@@ -166,15 +166,15 @@ The display won't work unless SPI is configured, see Hardware tab above.
 
 Add a new device
 
-Select "Output - NeoPixel (Basic)"
+Select `Output - NeoPixel (Basic)`
 
 Check enable
 
-Set GPIO -> DIN to GPIO-2
+Set `GPIO -> DIN` to `GPIO-2`
 
-Set Led Count to 5
+Set `Led Count` to `5`
 
-Set Strip Type to GRB
+Set `Strip Type` to `GRB`
 
 Click Submit
 
@@ -183,19 +183,19 @@ Click Submit
 
 Add a new device
 
-Select "Analog input - internal"
+Select `Analog input - internal`
 
 Check enable
 
 Name it Battery
 
-Set Analog Pin to ADC1 ch7 / GPIO-35
+Set `Analog Pin` to `ADC1 ch7 / GPIO-35`
 
-Set Oversampling to Oversampling
+Set `Oversampling` to `Oversampling`
 
-Check Apply Factory Calibration
+Check `Apply Factory Calibration`
 
-Apply the formula "%value%*2/1000" to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
+Apply the formula `%value%*2/1000` to the Formula field in Values (this formula needs to be tuned and calibrated to match the torelances of the 100k/100k resistor divider on the board)
 
 Click Submit
 
@@ -203,25 +203,25 @@ Click Submit
 
 Add a new device
 
-Select "Switch input - Switch"
+Select `Switch input - Switch`
 
 Check Enable
 
-Set GPIO to GPIO-0 (this selects the BOOT switch on the badge)
+Set `GPIO` to `GPIO-0` (this selects the BOOT switch on the badge)
 
-Set Switch Type to Switch
+Set `Switch Type` to `Switch`
 
-Set Switch Button Type to Normal Switch
+Set `Switch Button Type` to `Normal Switch`
 
 Click submit
 
 ### Tab "Tools":
 
-Click the Advanced button
+Click the `Advanced button`
 
-You can set NTP to be.pool.ntp.org here to get time through the internet
+You can set NTP to `be.pool.ntp.org` here to get time through the internet
 
-Enable Rules
+Enable `Rules`
 
 Click Submit
 
@@ -244,9 +244,9 @@ Check the serial terminal for feedback. You should see the "on Battery#Analog do
 
 ## Odds and ends
 
-The Buzzer on the badge is on pin GPIO32 and can be controlled with the command `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. PWM,32,100,100,3000). It does not require a device to be set up.
+The Buzzer on the badge is on pin `GPIO32` and can be controlled with the command `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. `PWM,32,100,100,3000`). It does not require a device to be set up.
     
-The IR receiver is on pin GPIO25 but requires a different ESPeasy firmware (custom_IR?) to be flashed before it can be used.
+The IR receiver is on pin `GPIO25 `but requires a different ESPeasy firmware (custom_IR?) to be flashed before it can be used.
 
  
 Have fun, happy hacking!
