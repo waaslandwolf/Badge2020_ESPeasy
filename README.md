@@ -124,7 +124,7 @@ Click Submit
 
 ### Tab "Devices:###
 
-**TFT Display **
+**TFT Display**
 
 Add a new device
 
