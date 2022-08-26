@@ -1,14 +1,12 @@
-# Badge2020_ESPeasy
-
-**Installing ESPeasy on the Fri3dcamp 2020 badge hardware**
+# Installing ESPeasy on the Fri3dcamp 2020 badge hardware
 
 This document descibes how to install and configure ESPeasy firmware on the Fri3dcamp 2020 badge.
 
-## ESPeasy
+# ESPeasy
 
 The ESP Easy firmware can be used to turn the ESP module into an easy multifunction sensor device for Home Automation solutions like Home Assistant, OpenHAB, Domoticz or other software that speaks MQTT. Configuration of the ESP Easy is entirely web based, so once you've got the firmware loaded, you don't need any other tool besides a common web browser. For more info, see https://www.letscontrolit.com/wiki/index.php/ESPEasy
 
-## What works and doesn't work
+# What works and doesn't work
 
 What *works* and has been tested:
 - TFT display
@@ -34,6 +32,7 @@ What *doesn't work* (not supported in ESPeasy):
 Work in progress:
 - Controlling the display backlight from ESPeasy as opposed to using the provided switch/accelerometer configuration
 
+# Step-by-step guide
 
 Here's the step for getting ESPeasy installed and configured on the Fri3dcamp 2020 badge.
 
@@ -294,8 +293,9 @@ Outputs do not need to be configured. They can be addresses directly by using co
 
 *Examples:*
 
-Type this into the `Command` prompt in the `Tools` menu:
-    rtttl,32:d=4,o=5,b=112:8a,8a,a,8a,8a,a,8a,8c6,8f.,16g,2a,8a-,8a-,8a-.,16a-,8a-,8a,8a.,16a,8a,8g,8g,8a,g,c6
+Type one of these into the `Command` prompt in the `Tools` menu:
+`rtttl,32:d=4,o=5,b=112:8a,8a,a,8a,8a,a,8a,8c6,8f.,16g,2a,8a-,8a-,8a-.,16a-,8a-,8a,8a.,16a,8a,8g,8g,8a,g,c6`
+`PWM,32,100,100,3000`
 
 Browse to the URL `http://<badge IP>/cmd?tone,32,1300,200`
 
@@ -307,9 +307,11 @@ Add this to your Rules to add a boot up sound that will play when your badge com
     endon
 
 
-## Odds and ends
+# Odds and ends
 
-The Buzzer on the badge is on pin `GPIO32` and can be controlled with the command `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. `PWM,32,100,100,3000`). It does not require a device to be set up.
+The Buzzer on the badge is on pin `GPIO32` and can be controlled directly using commands. It does not require a device to be set up.
+- `PWM,<GPIO>,<duty>,<duration>,<frequency>` (e.g. `PWM,32,100,100,3000`). 
+    rtttl,32:d=4,o=5,b=112:8a,8a
     
 The IR receiver is on pin `GPIO25` but requires a different ESPeasy firmware (custom_IR?) to be flashed before it can be used.
 
